@@ -3,6 +3,7 @@ import { Button, Label, Grid, Table } from "semantic-ui-react";
 
 const Geolocation = () => {
   const [coords, setCoords] = useState(null);
+  const color='blue'
 
   const getGeo = () => {
     const success = pos => setCoords(pos.coords);
@@ -14,12 +15,12 @@ const Geolocation = () => {
     <div>
       <Grid>
         <Grid.Row>
-          <Button basic color="blue" onClick={getGeo}>
+          <Button basic color={color} onClick={getGeo}>
             Geolocation
           </Button>
         </Grid.Row>
         <Grid.Row>
-          <Table celled>
+          <Table celled inverted color={color}>
             <Table.Body>
               <Table.Row>
                 <Table.Cell>
