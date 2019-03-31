@@ -8,19 +8,18 @@ const Performance = () => {
     setTiming(window.performance.timing);
   };
 
-  const color='orange'
   const getTime = unixTime => moment(unixTime).format("YYYY-MM-DD h:mm:ss a");
 
   return (
     <div>
       <Grid>
         <Grid.Row>
-          <Button basic color={color} onClick={getPerf}>
+          <Button basic color="orange" onClick={getPerf}>
             Window performance
           </Button>
         </Grid.Row>
         <Grid.Row>
-        <Table celled inverted color={color}>
+        <Table celled>
             <Table.Body>
               <Table.Row>
                 <Table.Cell>
